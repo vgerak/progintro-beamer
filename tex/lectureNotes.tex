@@ -11,7 +11,12 @@
 \usepackage{caption}
 \usepackage{subcaption}
 \usepackage{minted}
-\setsansfont[Mapping=TeX-text]{DejaVu Sans}
+\usepackage{amssymb}
+\usepackage{txfonts}
+\usepackage{tabularx}
+\usepackage{mathtools}
+%\setsansfont[Mapping=TeX-text]{CMU Sans Serif}
+\setsansfont[Mapping=TeX-text]{FreeSans}
 \definecolor{officegreen}{rgb}{0.0, 0.5, 0.0}
 %}}}
 
@@ -58,7 +63,7 @@
 \begin{document}
 
 \begin{frame}
-\titlepage
+	\titlepage
 \end{frame}
 
 \begin{frame}
@@ -81,12 +86,11 @@
 
 	\begin{center}{\large Διαφάνειες Παρουσιάσεων}\end{center}
 	\begin{itemize}
-	  \item Εισαγωγή στην πληροφορική
-		\item Εισαγωγή στον προγραμματισμό με τη γλώσσα
+	  \item[\checkmark] Εισαγωγή στην πληροφορική
+		\item[\checkmark] Εισαγωγή στον προγραμματισμό με τη γλώσσα
 			\textbf{{\color{officegreen}Pa{\color{red}z}cal}}
-	  \item Μεθοδολογία αλγοριθμικής επίλυσης προβλημάτων
+	  \item[\checkmark] Μεθοδολογία αλγοριθμικής επίλυσης προβλημάτων
 	\end{itemize}
-
 \end{frame}
 %}}}
 
@@ -94,43 +98,76 @@
 \section{Εισαγωγή}
 \begin{frame}
 	\frametitle{Εισαγωγή}
-	{\large Σκοπός του μαθήματος}
-	\begin{itemize}
-		\item Εισαγωγή στην {\color{violet}πληροφορική} (computer science)
-		\item Εισαγωγή στον {\color{violet}προγραμματισμό} ηλεκτρονικών
-			υπολογιστών (Η/Υ)
-		\item Μεθοδολογία {\color{violet}αλγοριθμικής επίλυσης προβλημάτων}
-	\end{itemize}
-\end{frame}
+	\only<1>{
+		\framesubtitle{(i)}
+		\begin{itemize}
+			\item[$\Diamondblack$]{\large Σκοπός του μαθήματος}
+			\begin{itemize}
+				\item Εισαγωγή στην {\color{violet}πληροφορική} (computer science)
+				\item Εισαγωγή στον {\color{violet}προγραμματισμό} ηλεκτρονικών
+					υπολογιστών (Η/Υ)
+				\item Μεθοδολογία {\color{violet}αλγοριθμικής επίλυσης προβλημάτων}
+			\end{itemize}
+		\end{itemize}
+	}
 
-\begin{frame}
-	{\large Σκοπός του μαθήματος}
-	\begin{itemize}
-		\item Εισαγωγή στην {\color{violet}πληροφορική} (computer science)
-		\item Εισαγωγή στον {\color{violet}προγραμματισμό} ηλεκτρονικών
-			υπολογιστών (Η/Υ)
-		\item Μεθοδολογία {\color{violet}αλγοριθμικής επίλυσης προβλημάτων}
-	\end{itemize}
-\end{frame}
+	\only<2>{
+		\framesubtitle{(ii)}
+		\begin{itemize}
+			\item[$\Diamondblack$]{\large Αλγόριθμος}
+			\begin{itemize}
+				\item Πεπερασμένη ακολουθία {\color{violet}ενεργειών} που περιγράφει τον
+					τρόπο επίλυσης ενός προβλήματος
+				\item Εφαρμόζεται σε {\color{violet}δεδομένα} (data)
+			\end{itemize}
+			\item[$\Diamondblack$]{\large Πρόγραμμα}
+			\begin{itemize}
+				\item Ακριβής περιγραφή ενός αλγορίθμου σε μία {\color{violet}τυπική γλώσσα}
+					που ονομάζεται {\color{violet}γλώσσα προγραμματισμού}
+			\end{itemize}
+		\end{itemize}
+	}
 
-\begin{frame}
-	{\large Σκοπός του μαθήματος}
-	\begin{itemize}
-		\item Εισαγωγή στην {\color{violet}πληροφορική} (computer science)
-		\item Εισαγωγή στον {\color{violet}προγραμματισμό} ηλεκτρονικών
-			υπολογιστών (Η/Υ)
-		\item Μεθοδολογία {\color{violet}αλγοριθμικής επίλυσης προβλημάτων}
-	\end{itemize}
-\end{frame}
+	\only<3>{
+		\framesubtitle{(iii)}
+		\begin{itemize}
+			\item[$\Diamondblack$]{\large Φυσική γλώσσα}
+			\begin{itemize}
+				\item Χωρίς τόσο αυστηρούς {\color{violet}συντακτικούς} περιορισμούς
+				\item Μεγάλη πυκνότητα και {\color{violet}σημασιολογική} ικανότητα
+			\end{itemize}
+			\item[$\Diamondblack$]{\large Τυπική γλώσσα}
+			\begin{itemize}
+				\item {\color{violet}Αυστηρότατη} σύνταξη και σημασιολογία
+			\end{itemize}
+			\item[$\Diamondblack$]{\large Γλώσσα προγραμματισμού}
+			\begin{itemize}
+				\item Τυπική γλώσσα στην οποία μπορούν να περιγραφούν
+					{\color{violet}υπολογισμοί}
+				\item {\color{violet}Εκτελέσιμη} από ένα ηλεκτρονικό υπολογιστή
+			\end{itemize}
+		\end{itemize}
+	}
 
-\begin{frame}
-	{\large Σκοπός του μαθήματος}
-	\begin{itemize}
-		\item Εισαγωγή στην {\color{violet}πληροφορική} (computer science)
-		\item Εισαγωγή στον {\color{violet}προγραμματισμό} ηλεκτρονικών
-			υπολογιστών (Η/Υ)
-		\item Μεθοδολογία {\color{violet}αλγοριθμικής επίλυσης προβλημάτων}
-	\end{itemize}
+	\only<4>{
+		\framesubtitle{(iv)}
+		\begin{itemize}
+			\item[$\Diamondblack$]{\large Πληροφορική}
+				\noindent\hspace*{-0.5cm}\begin{tabularx}{\textwidth+1cm}{
+						>{\advance\hsize-4em}X
+						>{\advance\hsize-2em}X
+						>{\advance\hsize1em}X
+				}
+					{\color{violet}Ηλεκτρονικοί \newline Υπολογιστές \newline (engineering)} &
+					$\newline\xleftrightarrow{\mathmakebox[8em]{ }}$ & $\newline${\color{violet}Μαθηματικά} \\
+					 & & \\
+					Σχεδίαση και \newline κατασκευή & & Θεωρία και \newline αναλυτική μέθοδος
+				\end{tabularx}
+				\vskip20pt
+			\item[$\Diamondblack$]{\large Κεντρική έννοια:\\
+					\hskip20pt {\color{violet}υπολογισμός} (computation)}
+		\end{itemize}
+	}
 \end{frame}
 
 %}}}

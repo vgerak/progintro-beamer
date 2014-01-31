@@ -1,0 +1,176 @@
+%{{{ Preamble
+\nonstopmode
+\documentclass{beamer}
+%\usepackage{xgreek}
+\usepackage{xunicode}
+\usepackage{hyperref}
+\usepackage{float}
+\usepackage{xltxtra}
+\usepackage{setspace}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{minted}
+\setsansfont[Mapping=TeX-text]{DejaVu Sans}
+\definecolor{officegreen}{rgb}{0.0, 0.5, 0.0}
+%}}}
+
+%{{{ Themes
+\usetheme{umbc1} % good one
+%\usetheme{umbc2} % good one
+%\usetheme{default}
+%\usetheme{PaloAlto}
+%\usetheme{Warsaw} %<-- Well known blue theme
+%\usetheme{Berlin}
+%\usecolortheme{seahorse} % good one
+%\usecolortheme{rose}
+%\usetheme{Berkeley}
+%\usetheme{boxes}
+%\usetheme{Antibes} % good one
+%\usetheme{Bergen}
+%\usetheme{CambridgeUS}
+%\usetheme{Copenhagen}
+%\usetheme{Darmstadt}
+%\usetheme{Dresden}
+%\usetheme{Frankfurt}
+%\usetheme{Goettingen}
+%\usetheme{Hannover}
+%\usetheme{Ilmenau}
+%\usetheme{JuanLesPins}
+%\usetheme{Luebeck}
+%\usetheme{Madrid}
+%\usetheme{Malmoe}
+%\usetheme{Marburg}
+%\usetheme{Montpellier} % simple enough, but looks ok
+%\usetheme{Pittsburgh}
+%\usetheme{Rochester}
+%\usetheme{Singapore}
+%\usetheme{Szeged}
+%\usetheme{Boadilla}
+%\usetheme{AnnArbor}
+%}}}
+
+\title[Προγραμματισμός Ηλεκτρονικών Υπολογιστών]{Προγραμματισμός Ηλεκτρονικών Υπολογιστών}
+\author[Σ.Ζάχος, Ν.Παπασπύρου]{Σ.Ζάχος, Ν.Παπασπύρου}
+%\institution[NTUA]{National Technical University of Athens}
+\date[12/13]{6/12/13}
+
+\begin{document}
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+\begin{frame}
+  \frametitle{Περιεχόμενα}
+    \tableofcontents%[pausesections]
+\end{frame}
+
+%{{{ Περιγραφή μαθήματος
+\begin{frame}
+	\frametitle{Προγραμματισμός Ηλεκτρονικών Υπολογιστών\\
+		\url{http://courses.softlab.ntua.gr/progintro/}}
+
+	Διδάσκοντες:
+	\begin{tabular}{ll}
+	  Στάθης Ζάχος & (\href{mailto:zachos@cs.ntua.gr}{\nolinkurl{zachos@cs.ntua.gr}}) \\
+	  Νίκος Παπασπύρου & (\href{mailto:nickie@softlab.ntua.gr}{\nolinkurl{nickie@softlab.ntua.gr}}) \\
+	  Δημήτρης Φωτάκης & (\href{mailto:fotakis@cs.ntua.gr}{\nolinkurl{fotakis@cs.ntua.gr}})
+	\end{tabular}
+	\vskip20pt
+
+	\begin{center}{\large Διαφάνειες Παρουσιάσεων}\end{center}
+	\begin{itemize}
+	  \item Εισαγωγή στην πληροφορική
+		\item Εισαγωγή στον προγραμματισμό με τη γλώσσα
+			\textbf{{\color{officegreen}Pa{\color{red}z}cal}}
+	  \item Μεθοδολογία αλγοριθμικής επίλυσης προβλημάτων
+	\end{itemize}
+
+\end{frame}
+%}}}
+
+%{{{ Εισαγωγή
+\section{Εισαγωγή}
+\begin{frame}
+	\frametitle{Εισαγωγή}
+	{\large Σκοπός του μαθήματος}
+	\begin{itemize}
+		\item Εισαγωγή στην {\color{violet}πληροφορική} (computer science)
+		\item Εισαγωγή στον {\color{violet}προγραμματισμό} ηλεκτρονικών
+			υπολογιστών (Η/Υ)
+		\item Μεθοδολογία {\color{violet}αλγοριθμικής επίλυσης προβλημάτων}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	{\large Σκοπός του μαθήματος}
+	\begin{itemize}
+		\item Εισαγωγή στην {\color{violet}πληροφορική} (computer science)
+		\item Εισαγωγή στον {\color{violet}προγραμματισμό} ηλεκτρονικών
+			υπολογιστών (Η/Υ)
+		\item Μεθοδολογία {\color{violet}αλγοριθμικής επίλυσης προβλημάτων}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	{\large Σκοπός του μαθήματος}
+	\begin{itemize}
+		\item Εισαγωγή στην {\color{violet}πληροφορική} (computer science)
+		\item Εισαγωγή στον {\color{violet}προγραμματισμό} ηλεκτρονικών
+			υπολογιστών (Η/Υ)
+		\item Μεθοδολογία {\color{violet}αλγοριθμικής επίλυσης προβλημάτων}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	{\large Σκοπός του μαθήματος}
+	\begin{itemize}
+		\item Εισαγωγή στην {\color{violet}πληροφορική} (computer science)
+		\item Εισαγωγή στον {\color{violet}προγραμματισμό} ηλεκτρονικών
+			υπολογιστών (Η/Υ)
+		\item Μεθοδολογία {\color{violet}αλγοριθμικής επίλυσης προβλημάτων}
+	\end{itemize}
+\end{frame}
+
+%}}}
+
+%{{{ Γλώσσες Προγραμματισμού
+\section{Γλώσσες Προγραμματισμού}
+\begin{frame}
+	\frametitle{Γλώσσες Προγραμματισμού}
+  To be done
+\end{frame}
+%}}}
+
+%{{{ Ασκήσεις
+\section{Ασκήσεις}
+
+\subsection{Ασκήσεις (Pascal)}
+\begin{frame}
+	\frametitle{Ασκήσεις (Pascal)}
+  To be done
+\end{frame}
+
+\subsection{Ασκήσεις (C)}
+\begin{frame}
+	\frametitle{Ασκήσεις (C)}
+  To be done
+\end{frame}
+%}}}
+
+%{{{ Δομή του προγράμματος
+\section{Δομή του προγράμματος}
+\begin{frame}
+  To be done
+\end{frame}
+%}}}
+
+%{{{ Τι σημαίνει ορθό πρόγραμμα
+\section{Τι σημαίνει ορθό πρόγραμμα}
+\begin{frame}
+  To be done
+\end{frame}
+%}}}
+
+\end{document}
